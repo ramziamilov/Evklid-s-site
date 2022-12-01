@@ -635,6 +635,7 @@ background-color: var(--orange-color);
 }
 
 .social_item {
+  display: inline-block;
   width: 60px;
   height: 60px;
 }
