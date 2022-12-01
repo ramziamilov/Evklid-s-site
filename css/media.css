@@ -1,0 +1,11 @@
+@media (max-width: 1200px) {
+  .how_we_work__content * {
+    width: 100%;}
+  .how_we_work__content::before {
+    width: 100%;
+    min-height: 180px;
+    bottom: 0;}
+  .how_we_work__content {
+    padding-top: 190px;
+  }
+  }
