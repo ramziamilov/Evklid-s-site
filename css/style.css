@@ -220,11 +220,11 @@ margin-right: 260px;
 
 /*main*/
 
-.main__section {
+.main {
   padding: 25px 0;
 }
 
-.main__section .container {
+.main .container {
   padding: 100px 80px;
   background-image: url("/img/bg_section_one.jpg");
   background-repeat: no-repeat;
@@ -743,7 +743,7 @@ textarea:active {
 
 
 .footer__btn {
-  margin-right: 18px;
+  margin-right: 9px;
   padding: 19px 52px;
   font-weight: 700;
   font-size: 16px;
@@ -772,9 +772,9 @@ textarea:active {
   position: absolute;
   margin-top: 1.3em;
   margin-right: -1.5em;
-  margin-left: -1.5em;
-  width: 1em;
-  height: 1em;
+  margin-left: -1.1em;
+  width: 0.8em;
+  height: 0.8em;
   outline: 1px solid #CACACA;
   border-radius: 2px;;
  }
