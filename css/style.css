@@ -190,7 +190,7 @@ color: #000000;
   border-bottom: 2px solid var(--orange-color);
 }
 
-.nav__link:active {
+.nav__link:active:focus-visible {
   outline: none;
   color: var(--darkorange);
   border-bottom: 2px solid var(--darkorange);
@@ -439,21 +439,25 @@ background-color: var(--orange-color);
 }
 
 .work-content {
-  position: relative;
+  display: flex;
   min-height: 400px;
 }
 
-.work-content::before {
-  content: "";
-  position: absolute;
+.work-before {
+  position: relative;
   width: 49%;
   height: auto;
-  top: 10px;
-  bottom: 0;
-  right: 0;
+}
+
+.work-before::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: -15px;
   background-image: url("/img/hww1.jpg");
   background-size: cover;
-  background-position: right center;
+  background-position: center;
   border-radius: 32px;
 }
 
@@ -786,9 +790,20 @@ textarea:active {
   margin-left: -1.2em;
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
 .check-box {
   position: absolute;
-  margin-top: 1.3em;
+  margin-top: 1.5em;
   margin-right: -1.5em;
   margin-left: -1.1em;
   width: 0.8em;
