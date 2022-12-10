@@ -26,13 +26,10 @@
   .header {
     padding: 10px 0;
   }
+
   .header-container {
     padding: 16px 50px;
   }
-
-.header__nav {
-  display: none;
-}
 
 .burger {
   margin-right: 42%;
@@ -42,12 +39,33 @@
   color: #000000;
 }
 
+.header__btn__serch {
+  top: 26px;
+  right: 50px
+}
+
+.header__btn__serch--active {
+  transform: translateX(-25px);
+ }
+
+.search {
+  padding: 9px 95px 4px 29px;
+  right: 15px;
+}
+
+.search::-webkit-search-cancel-button  {
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+}
+
 .burger-line {
   position: absolute;
   left: 60%;
   width: 30px;
   height: 3px;
-   background-color: currentColor;
+  background-color: currentColor;
+
 }
 
 .burger-line:first-child {
@@ -61,6 +79,75 @@
 .burger-line:nth-child(2) {
   transform: translateY(-120%);
 }
+
+/*burger-active*/
+
+.header__nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42%;
+  min-width: 250px;
+  height: 100vh;
+  z-index: 10;
+  padding: 100px 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 32px 32px;
+  overflow-y: auto;
+  visibility: hidden;
+  transform: translateX(-120%);
+  transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.header__nav .nav__list {
+  flex-direction: column;
+}
+
+.header__nav .nav__item:not(:last-child) {
+  margin-right: 0;
+  margin-bottom: 60px;
+}
+
+.header__nav .nav__link {
+  font-size: 24px;
+}
+
+.header__nav--active {
+  visibility: visible;
+  transform: none;
+}
+
+.burger--active .burger-line:nth-child(2) {
+  opacity: 0;
+ }
+
+ .burger--active .burger-line:first-child {
+   left: 25%;
+   top: 50%;
+   z-index: 100;
+   transform: rotate(45deg);
+   transform-origin: center;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+ }
+ .burger--active .burger-line:last-child {
+   bottom: auto;
+   left: 25%;
+   top: 50%;
+   z-index: 100;
+   transform: rotate(-45deg);
+   transform-origin: center;
+   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+ }
+
+ .burger-line {
+   transition:transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out; ;
+ }
+
+ .stop-scroll {
+   overflow: hidden;
+ }
+
 
 .header__logo img {
   margin-right: auto;
@@ -232,6 +319,20 @@ line-height: 24px
     padding-left: 1.2em;
     align-items: center;
 }
+
+.header__btn__serch {
+  top: 26px;
+  right: 50px
+}
+
+.header__btn__serch--active {
+  transform: translateX(-25px);
+ }
+
+.search {
+  padding: 9px 90px 4px 29px;
+}
+
 }
 
 @media (min-width: 767px) and (max-width: 992px) {
@@ -255,6 +356,26 @@ padding: 3px 50px;
   margin-right: 39%;
 }
 
+.header__btn__serch {
+  top: 20px;
+  right: 50px
+}
+
+.header__btn__serch--active {
+  transform: translateX(-25px);
+ }
+
+.search {
+  padding: 9px 90px 4px 29px;
+  top: 0;
+}
+
+.search::-webkit-search-cancel-button  {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
 .hero-container {
   padding: 159px 40px;
 }
@@ -268,7 +389,6 @@ padding: 3px 50px;
   font-size: 18px;
   line-height: 22px;
 }
-
 
 .about {
   padding: 27px 0 10px 0;
@@ -418,6 +538,26 @@ padding: 3px 50px;
   margin-right: 39%;
 }
 
+.header__btn__serch {
+  top: 20px;
+  right: 50px
+}
+
+.header__btn__serch--active {
+  transform: translateX(-25px);
+ }
+
+.search {
+  padding: 9px 90px 4px 29px;
+  top: 0;
+}
+
+.search::-webkit-search-cancel-button  {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
 .hero-container {
   padding: 159px 40px;
 }
@@ -540,14 +680,6 @@ padding: 3px 50px;
   padding: 18px 14px;
 }
 
-
-
-
-
-
-
-
-
 }
 
 @media (min-width:321px) and (max-width:575px) {
@@ -570,6 +702,26 @@ padding: 3px 50px;
   .header__logo img {
     margin-right: auto;
     width: 64%
+  }
+
+  .header__btn__serch {
+    top: 28px;
+    right: 20px
+  }
+
+  .header__btn__serch--active {
+    transform: translateX(-50px);
+   }
+
+  .search::-webkit-search-cancel-button  {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .search {
+    padding: 9px 80px 4px 29px;
+    max-width: 300px;
   }
 
   .hero {
@@ -946,6 +1098,25 @@ textarea {
   .header__logo img {
     margin-right: auto;
     width: 64%
+  }
+
+  .header__btn__serch {
+    top: 25px;
+    right: 20px
+  }
+
+  .header__btn__serch--active {
+    transform: translateX(-40px);
+   }
+
+  .search {
+    padding: 5px 80px 4px 29px;
+    max-width: 300px;
+  }
+
+  .search::-webkit-search-cancel-button  {
+    right: 5px;
+    bottom: 15px;
   }
 
   .hero {
