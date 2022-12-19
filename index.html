@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Евклид. Проектные решения</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="icon" href="/img/favicon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
   <header class="header">
@@ -43,27 +43,52 @@
           </li>
         </ul>
       </nav>
-      <input class="search" type="search" placeholder="Что будем искать?">
       <button class="header__btn__serch btn-reset">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
           <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
         </svg>
       </button>
+      <form class="header-form">
+        <input class="search" type="text" placeholder="Что будем искать?">
+        <button class="find-search btn-reset" type="submit">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
+            <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="close-search btn-reset">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8.9541" y="7.30444" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30444)" fill="#CACACA"/>
+            <rect x="7.30469" y="15.5525" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5525)" fill="#CACACA"/>
+            <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2"/>
+          </svg>
+        </button>
+      </form>
     </div>
   </header>
 <main>
   <section class="hero">
     <div class="hero-container container">
-      <h1 class="hero-h1 title-h1">
-        Проектные решения любой сложности
-      </h1>
-      <p class="hero-text text">
-        Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
-      </p>
-      <button class="hero-btn btn btn-reset">
-        Заказать расчёт
-      </button>
+      <div class="hero-content">
+        <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-slide-one"></div>
+            <div class="swiper-slide hero-slide-two"></div>
+            <div class="swiper-slide hero-slide-three"></div>
+          </div>
+        </div>
+          <div class="swiper-pagination hero-pagination"></div>
+          <h1 class="hero-h1 title-h1">
+            Проектные решения любой сложности
+          </h1>
+          <p class="hero-text text">
+            Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
+          </p>
+          <button class="hero-btn btn btn-reset">
+            Заказать расчёт
+          </button>
+      </div>
     </div>
   </section>
   <section class="about">
@@ -139,19 +164,43 @@
         Как мы работаем
       </h2>
       <ul class="work-list list-reset">
-        <li class="work-item"><a href="#" class="work-link">1 шаг</a></li>
-        <li class="work-item"><a href="#" class="work-link">2 шаг</a></li>
-        <li class="work-item"><a href="#" class="work-link">3 шаг</a></li>
-        <li class="work-item"><a href="#" class="work-link">4 шаг</a></li>
+        <li class="work-item"><a class="work-link work-link--active" data-path="stepone">1 шаг</a></li>
+        <li class="work-item"><a class="work-link" data-path="steptwo">2 шаг</a></li>
+        <li class="work-item"><a class="work-link" data-path="stepthree">3 шаг</a></li>
+        <li class="work-item"><a class="work-link" data-path="stepfour">4 шаг</a></li>
       </ul>
       <div class="work-content">
-        <article class="work-content-left">
-          <h3 class="work-h3 title-h3">
-            Проводим консультацию
-          </h3>
-          <p class="work-text text">
-            Влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, призваны к&nbsp;ответу.
-          </p>
+        <article class="work-content-left ">
+          <div class="work-content-tabs work-content-tabs--active" data-target="stepone" >
+            <h3 class="work-h3 title-h3">
+              Проводим консультацию
+            </h3>
+            <p class="work-text text">
+              Влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, призваны к&nbsp;ответу.
+            </p>
+          </div>
+          <div class="work-content-tabs " data-target="steptwo">
+            <h3 class="work-h3 title-h3">
+              Составляем смету
+            </h3>
+            <p class="work-text text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorum, sit dicta blanditiis labore soluta beatae laborum vero voluptate natus quis dolorem inventore in culpa fugiat consequuntur veniam amet nobis!            </p>
+          </div>
+          <div class="work-content-tabs" data-target="stepthree">
+            <h3 class="work-h3 title-h3">
+              Привлекаем подрядчиков
+            </h3>
+            <p class="work-text text">
+              Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.            </p>
+          </div>
+          <div class="work-content-tabs" data-target="stepfour">
+            <h3 class="work-h3 title-h3">
+              Инспектируем все этапы работ
+            </h3>
+            <p class="work-text text">
+              Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит
+              о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.          </p>
+          </div>
           <div class="work-content-left-btn">
             <a class="work-btn-more btn btn-reset" href="#">Подробнее
             </a>
@@ -160,7 +209,10 @@
             </a>
         </div>
         </article>
-        <div class="work-before"></div>
+        <div class="work-before work-before--active" data-imgtarget="stepone"></div>
+        <div class="work-before" data-imgtarget="steptwo"></div>
+        <div class="work-before" data-imgtarget="stepthree"></div>
+        <div class="work-before" data-imgtarget="stepfour"></div>
       </div>
     </div>
   </section>
@@ -171,14 +223,14 @@
       </h2>
       <ul class="questions-list list-reset">
         <li class="questions-item">
-          <button class="item-top btn-reset">
-            <span class="item-top-question">
-              Из чего формируется конечная стоимость проекта?
-            </span>
-            <span class="item-top-btn questions-btn btn-plus"></span>
-          </button>
+            <button class="item-top btn-reset">
+              <span class="item-top-question">
+                Из чего формируется конечная стоимость проекта?
+              </span>
+              <span class="item-top-btn questions-btn btn-plus"></span>
+            </button>
           <div class="item-bottom">
-            <p>text</p>
+            <p class="item-bottom-answer">text</p>
           </div>
         </li>
         <li class="questions-item">
@@ -189,7 +241,7 @@
             <span class="item-top-btn questions-btn btn-plus"></span>
           </button>
           <div class="item-bottom">
-            <p>text</p>
+            <p class="item-bottom-answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo autem deserunt nihil? Optio adipisci at esse. Optio odio, officia tenetur qui dolore labore quo veniam quas id possimus. Laborum, in.</p>
           </div>
         </li>
         <li class="questions-item">
@@ -200,7 +252,7 @@
             <span class="item-top-btn questions-btn btn-plus"></span>
           </button>
           <div class="item-bottom">
-            <p>text</p>
+            <p class="item-bottom-answer">text</p>
           </div>
         </li>
         <li class="questions-item">
@@ -211,7 +263,7 @@
             <span class="item-top-btn questions-btn btn-plus"></span>
           </button>
           <div class="item-bottom">
-            <p>text</p>
+            <p class="item-bottom-answer">text</p>
           </div>
         </li>
         <li class="questions-item">
@@ -222,7 +274,7 @@
             <span class="item-top-btn questions-btn btn-plus"></span>
           </button>
           <div class="item-bottom">
-            <p>text</p>
+            <p class="item-bottom-answer">text</p>
           </div>
         </li>
       </ul>
@@ -336,7 +388,8 @@
     </div>
   </div>
 </footer>
-<script src="/js/sript.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/accordion-js@3.3.2/dist/accordion.min.js"></script>
+<script src="/js/sript.js"></script>
 </body>
 </html>

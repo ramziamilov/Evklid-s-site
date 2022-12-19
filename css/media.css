@@ -159,7 +159,17 @@
 }
 
 .hero-container {
-  padding: 160px 78px;
+  padding: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  padding: 159px 40px;
+}
+
+.hero-btn {
+  align-self: flex-start;
 }
 
 .hero-h1 {
@@ -333,6 +343,38 @@ line-height: 24px
   padding: 9px 90px 4px 29px;
 }
 
+.hero-container {
+  padding: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  padding: 160px 78px;
+}
+
+.hero-btn {
+  align-self: flex-start;
+}
+
+.hero-swiper {
+  border-radius: 16px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 25px;
+  left: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 20px 0 0;
+}
+
 }
 
 @media (min-width: 767px) and (max-width: 992px) {
@@ -357,7 +399,7 @@ padding: 3px 50px;
 }
 
 .header__btn__serch {
-  top: 20px;
+  top: 16px;
   right: 50px
 }
 
@@ -367,17 +409,38 @@ padding: 3px 50px;
 
 .search {
   padding: 9px 90px 4px 29px;
-  top: 0;
+  top: -30px;
 }
 
-.search::-webkit-search-cancel-button  {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
 
 .hero-container {
+  padding: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
   padding: 159px 40px;
+  align-items: center;
+
+}
+
+.hero-swiper {
+  border-radius: 16px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 25px;
+  left: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 20px 0 0;
 }
 
 .hero-h1 {
@@ -388,6 +451,10 @@ padding: 3px 50px;
 .hero-text {
   font-size: 18px;
   line-height: 22px;
+}
+
+.hero-btn {
+  align-self: flex-start;
 }
 
 .about {
@@ -549,18 +616,39 @@ padding: 3px 50px;
 
 .search {
   padding: 9px 90px 4px 29px;
-  top: 0;
-}
-
-.search::-webkit-search-cancel-button  {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+  top: -30px;
 }
 
 .hero-container {
-  padding: 159px 40px;
+  padding: 0;
 }
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  padding: 59px 15px;
+  align-items: center;
+
+}
+
+.hero-swiper {
+  border-radius: 16px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 10px;
+  left: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 21px 0 0;
+}
+
 
 .hero-h1 {
   font-size: 50px;
@@ -692,7 +780,7 @@ padding: 3px 50px;
   }
 
   .header-container {
-    padding: 17px 15px;
+    padding: 15px 15px;
   }
 
   .burger {
@@ -705,19 +793,13 @@ padding: 3px 50px;
   }
 
   .header__btn__serch {
-    top: 28px;
-    right: 20px
+    top: 22px;
+    right: 17px
   }
 
   .header__btn__serch--active {
     transform: translateX(-50px);
    }
-
-  .search::-webkit-search-cancel-button  {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-  }
 
   .search {
     padding: 9px 80px 4px 29px;
@@ -743,11 +825,33 @@ padding: 3px 50px;
   }
 
   .hero-container {
+    padding: 0;
+  }
+
+  .hero-content {
     display: flex;
     flex-direction: column;
-    padding: 60px 15px;
+    padding: 59px 15px;
     align-items: center;
+
+  }
+
+  .hero-swiper {
     border-radius: 16px;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 21px 0 0;
   }
 
   .btn {
@@ -769,16 +873,17 @@ line-height: 29px;
 }
 
 .about {
-  padding: 29px 0 10px 6px;
+  padding: 29px 0px 35px 6px;
+
 }
 
 .about-container {
   padding: 0 8px;
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .about-text {
-  margin-bottom: 14px;
+  margin-bottom: 43px;
   font-size: 14px;
   line-height: 28px;
 
@@ -802,6 +907,7 @@ line-height: 29px;
 
 .about-content-left-block {
   flex-direction: column;
+  margin-bottom: 20px;
   padding: 72% 0 0 0 ;
   background: none;
 }
@@ -829,18 +935,19 @@ color: #000000;
 }
 
 .top-block, .bot-block {
-  margin-bottom: 19px;
+  margin-bottom: -8;
   flex-direction: column;
   justify-content: start;
   align-self: flex-start;
-  padding: 2px 10px 0 0;
+  padding: 0px 3px 0 3px;
   border: none;
+  border-radius: 0;
 }
 
 .bot-block {
   margin-bottom: 0;
-  padding: 1px 10px 0 0;
- }
+}
+
 
 .about-content-right-img {
   margin-right: 0 ;
@@ -865,11 +972,11 @@ line-height: 22px;
  }
 
  .about-content-right-text {
-  height: auto;
+  min-height: 184px;
  }
 
  .work {
-  padding: 10px 0 20px 0;
+  padding: 35px 0 20px 0;
  }
 
  .work-container {
@@ -1086,9 +1193,12 @@ textarea {
     padding: 0;
     border-radius: 0 0 26px 26px;
   }
+  .header__nav {
+    min-width: 320px;
+  }
 
   .header-container {
-    padding: 17px 15px;
+    padding: 15px 15px;
   }
 
   .burger {
@@ -1101,23 +1211,23 @@ textarea {
   }
 
   .header__btn__serch {
-    top: 25px;
-    right: 20px
+    top: 22px;
+    right: 16px
   }
-
-  .header__btn__serch--active {
-    transform: translateX(-40px);
-   }
 
   .search {
-    padding: 5px 80px 4px 29px;
-    max-width: 300px;
+    padding: 9px 75px 4px 29px;
+    right: -10px;
   }
 
-  .search::-webkit-search-cancel-button  {
-    right: 5px;
-    bottom: 15px;
+  .find-search--active {
+    right: 48px;
   }
+
+  .close-search--active {
+    right: 15px;
+  }
+
 
   .hero {
     padding: 10px 17px 30px 17px;
@@ -1138,11 +1248,34 @@ textarea {
   }
 
   .hero-container {
+    padding: 0;
+
+  }
+
+  .hero-content {
     display: flex;
     flex-direction: column;
-    padding: 60px 15px;
+    padding: 58px 15px;
     align-items: center;
+
+  }
+
+  .hero-swiper {
     border-radius: 16px;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 21px 0 0;
   }
 
   .btn {
@@ -1173,7 +1306,7 @@ line-height: 29px;
 }
 
 .about-text {
-  margin-bottom: 11px;
+  margin-bottom: 12px;
   font-size: 14px;
   line-height: 28px;
 
