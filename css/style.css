@@ -205,6 +205,11 @@ color: #000000;
   visibility: visible;
  }
 
+ .header__btn__serch:focus-visible {
+  outline: 1px solid var(--orange-color);
+  outline-offset: 2px;
+ }
+
  .header__btn__serch--active {
   visibility: hidden;
  }
@@ -241,6 +246,7 @@ max-width: 540px;
 height: 60px;
 background: #FFFFFF;
 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+border: none;
 border-color: #CACACA;
 border-radius: 24px;
 visibility: hidden;
@@ -264,6 +270,16 @@ transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
 display: none;
 transform: scale(0);
 transition: transform 0.5s ease-in-out;
+}
+
+.find-search rect {
+  fill:var(--orange-color);
+
+}
+
+.find-search path {
+  stroke:var(--orange-color);
+
 }
 
 .close-search {
@@ -745,12 +761,17 @@ background-color: var(--orange-color);
   width: 100%;
   background-color: transparent;
   position: relative;
-  margin-top: -1px;
+  margin-top: 0;
   transition: border-color .3s ease-in-out;
 }
 .questions-item:first-child .item-top {
-  border-top: 1px solid gray;
+  border-top: 2px solid gray;
 }
+
+.questions-item:last-child .item-top {
+  border-bottom: 2px solid gray;
+}
+
 .item-top-question {
   text-align: left;
   margin-right: auto;
@@ -1010,6 +1031,7 @@ textarea:active {
   background-position: center;
 }
 
+
 .check:hover .check-box {
   outline: 1px solid var(--orange-color);
  }
@@ -1018,9 +1040,6 @@ textarea:active {
   color: var(--orange-color);
  }
 
-.check:focus-visible .check-box {
-  outline: 1px solid var(--orange-color);
- }
 
 .check-text {
   color: #CACACA;
